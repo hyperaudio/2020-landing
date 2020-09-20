@@ -68,9 +68,7 @@ export default function Topbar({ location: { pathname }, ...props }) {
             justify="space-between"
             spacing={4}>
             <Grid item className={`${classes.logo} ${classes.inner}`} xs={6}>
-              <Link component={GatsbyLink} to="/" className={classes.brandlink}>
-                <Hyperaudio className={classes.brandmark} />
-              </Link>
+              <Hyperaudio className={classes.brandmark} />
             </Grid>
             <Grid item container className={`${classes.inner}`} xs={6} justify="flex-end">
               <Elsewhere />
