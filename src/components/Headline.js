@@ -5,10 +5,10 @@ import Typography from '@material-ui/core/Typography';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 const useStyles = makeStyles(theme => ({
-  title: {
-    marginBottom: theme.spacing(4),
+  text: {
+    marginTop: theme.spacing(2),
     [theme.breakpoints.up('md')]: {
-      marginBottom: theme.spacing(8),
+      marginTop: theme.spacing(4),
     },
   },
 }));
@@ -18,12 +18,19 @@ export default function Headline({ text, title, ...props }) {
   return (
     <Container maxWidth="md">
       {title ? (
-        <Typography align="center" className={classes.title} variant="h1">
+        <Typography align="center" variant="h1">
           {title}
         </Typography>
       ) : null}
       {props.children}
-      {text ? <Typography align="center" dangerouslySetInnerHTML={{ __html: text }} variant="subtitle1" /> : null}
+      {text ? (
+        <Typography
+          align="center"
+          className={classes.text}
+          dangerouslySetInnerHTML={{ __html: text }}
+          variant="subtitle1"
+        />
+      ) : null}
     </Container>
   );
 }

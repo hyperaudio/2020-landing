@@ -13,6 +13,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 
 import Headline from '@src/components/Headline';
 import Layout from '@src/components/Layout';
+import Separator from '@src/components/Separator';
 import config from '@src/config';
 import withTheme from '@src/themes/withTheme';
 
@@ -69,8 +70,9 @@ const HomeTpl = ({
       <main>
         <div className={classes.pitch}>
           <Container disableGutters className={classes.pitchInner}>
-            <Headline title={frontmatter.pitch.title}></Headline>
+            <Headline title={frontmatter.pitch.title} text={frontmatter.pitch.text}></Headline>
           </Container>
+          <Separator silent />
           <Container disableGutters className={classes.pitchInner} maxWidth="md">
             <Grid container spacing={8}>
               <Grid item xs={12} sm={6}>
@@ -135,6 +137,7 @@ export const pageQuery = graphql`
         title
         pitch {
           title
+          text
         }
       }
     }
