@@ -78,7 +78,7 @@ const HomeTpl = ({
               <Grid item xs={12} sm={6}>
                 <Card>
                   <CardContent>
-                    <Typography>Remix audio and video from Interactive Transcripts</Typography>
+                    <Typography>Remix audio and video from Interactive Transcripts.</Typography>
                     <Typography>It’s as simple as drag and drop!</Typography>
                   </CardContent>
                 </Card>
@@ -86,32 +86,32 @@ const HomeTpl = ({
               <Grid item xs={12} sm={6}>
                 <Card>
                   <CardContent>
-                    <Typography>Encourage Media Literacy with Hyperaudio for Schools</Typography>
-                    <Typography>Show kids how to create and evaluate media. Video essays anyone?</Typography>
+                    <Typography>Encourage Media Literacy with Hyperaudio for Schools.</Typography>
+                    <Typography>Show students how to create and evaluate media. Video essays anyone?</Typography>
                   </CardContent>
                 </Card>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Card>
                   <CardContent>
-                    <Typography>Make your online conference super-accessible and multilingual</Typography>
-                    <Typography>Search, comment and share conference material with the world</Typography>
+                    <Typography>Make your online conference super-accessible and multilingual.</Typography>
+                    <Typography>Search, comment and share conference material with the world.</Typography>
                   </CardContent>
                 </Card>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Card>
                   <CardContent>
-                    <Typography>Edit your Podcast in double-quick time</Typography>
-                    <Typography>And get a complementary Interactive Transcript to boot</Typography>
+                    <Typography>Edit your Podcast in double-quick time.</Typography>
+                    <Typography>And get an accompanying Interactive Transcript into the bargain.</Typography>
                   </CardContent>
                 </Card>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Card>
                   <CardContent>
-                    <Typography>Capture lectures so you can experience them remotely</Typography>
-                    <Typography>Bookmark, annotate and summarise the good bits</Typography>
+                    <Typography>Capture lectures so you can experience them remotely and in your own time.</Typography>
+                    <Typography>Bookmark, annotate and summarise the good bits.</Typography>
                   </CardContent>
                 </Card>
               </Grid>
@@ -119,7 +119,7 @@ const HomeTpl = ({
           </Container>
           <Container disableGutters className={classes.ctas}>
             <Button color="primary" href={config.elsewhere.tinyletter} size="large" variant="contained">
-              Get updates
+              Get early access!
             </Button>
           </Container>
         </div>
