@@ -11,7 +11,7 @@ export default createMuiTheme({
       root: {
         ...defaultTheme.overrides.MuiPaper.root,
         backgroundColor: colors.mono[100],
-        color: colors.mono[900],
+        color: colors.primary[900],
       },
       outlined: {
         ...defaultTheme.overrides.MuiPaper.outlined,
@@ -71,12 +71,18 @@ export default createMuiTheme({
     ...defaultTheme.palette,
     background: {
       ...defaultTheme.palette.background,
-      default: colors.mono[800],
-      paper: colors.mono[900],
+      default: colors.mono[100],
+      paper: colors.mono[100],
+    },
+    secondary: {
+      contrastText: colors.mono[100],
+      dark: colors.secondary[600],
+      main: colors.secondary[500],
     },
     text: {
       ...defaultTheme.palette.text,
-      primary: colors.mono[100],
+      primary: colors.primary[900],
+      secondary: colors.mono[400],
     },
   },
 });

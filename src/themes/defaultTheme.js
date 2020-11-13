@@ -26,23 +26,6 @@ export default createMuiTheme({
     },
   },
   overrides: {
-    MuiBottomNavigation: {
-      root: { height: 'auto' },
-    },
-    MuiBottomNavigationAction: {
-      root: {
-        paddingTop: mui.spacing(1.5, 0, 1.5, 0),
-        '&$selected': {
-          paddingTop: 'auto',
-        },
-      },
-      label: {
-        ...mui.typography.caption,
-        '&$selected': {
-          ...mui.typography.caption,
-        },
-      },
-    },
     MuiButton: {
       root: {
         borderRadius: 100,
@@ -71,20 +54,12 @@ export default createMuiTheme({
         },
       },
       containedSizeLarge: {
-        padding: mui.spacing(2, 4),
-        ...setType(400),
+        padding: mui.spacing(1.5, 2.5),
+        ...setType(300),
       },
       outlinedSizeLarge: {
-        padding: mui.spacing(2, 4),
-        ...setType(400),
-      },
-    },
-    MuiCardContent: {
-      root: {
-        padding: mui.spacing(4),
-        '&:last-child': {
-          paddingBottom: mui.spacing(6),
-        },
+        padding: mui.spacing(1.5, 2.5),
+        ...setType(300),
       },
     },
     MuiIconButton: {
@@ -143,7 +118,7 @@ export default createMuiTheme({
     divider: colors.mono[900],
     text: {
       primary: colors.mono[100],
-      secondary: colors.mono[300],
+      secondary: colors.flare[500],
     },
     primary: {
       contrastText: mui.palette.getContrastText(colors.blue),

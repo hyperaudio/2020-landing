@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 
@@ -21,8 +21,12 @@ import withTheme from '@src/themes/withTheme';
 
 const useStyles = makeStyles(theme => ({
   pitch: {
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(10),
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
+    [theme.breakpoints.up('md')]: {
+      marginTop: theme.spacing(10),
+      marginBottom: theme.spacing(10),
+    },
   },
   ctas: {
     textAlign: 'center',
@@ -52,7 +56,12 @@ const useStyles = makeStyles(theme => ({
       margin: theme.spacing(0, 0, 10),
     },
   },
-  something: {},
+  signup: {
+    padding: theme.spacing(4),
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(8),
+    },
+  },
 }));
 
 const HomeTpl = ({
@@ -62,10 +71,6 @@ const HomeTpl = ({
   ...props
 }) => {
   const classes = useStyles();
-  const [signupData, setSignupData] = useState({
-    email: '',
-    optin: '',
-  });
 
   // console.group('HomeTpl.js');
   // console.log(props);
@@ -82,7 +87,7 @@ const HomeTpl = ({
             <Typography align="center" variant="h1" gutterBottom>
               A new way of looking at audio
             </Typography>
-            <Typography align="center" className={classes.text} variant="h3">
+            <Typography align="center" className={classes.text} component="p" variant="h3">
               Fully accessible media
             </Typography>
           </Container>
@@ -91,92 +96,73 @@ const HomeTpl = ({
         <Container disableGutters maxWidth="md">
           <Grid container spacing={8}>
             <Grid item xs={12} sm={6}>
-              <div className={classes.something}>
-                <Typography variant="h5" component="h2" gutterBottom>
-                  Hyperaudio puts timed-transcripts at the center of your media workflow.
-                </Typography>
-                <Typography variant="body1">
-                  We make it easy to edit and combine machine-generated transcripts with audio and video.
-                </Typography>
-              </div>
+              <Typography variant="h5" component="h2" gutterBottom>
+                Hyperaudio puts timed-transcripts at the center of your media workflow
+              </Typography>
+              <Typography variant="body1">
+                We make it easy to edit and combine machine-generated transcripts with audio and video.
+              </Typography>
+            </Grid>
+            <Grid alignContent="stretch" item xs={12} sm={6}>
+              <Typography variant="h5" component="h2" gutterBottom>
+                Remix audio and video from Interactive Transcripts
+              </Typography>
+              <Typography variant="body1">It’s as simple as drag and drop!</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <div className={classes.something}>
-                <Typography variant="h5" component="h2" gutterBottom>
-                  Remix audio and video from Interactive Transcripts.
-                </Typography>
-                <Typography variant="body1">It’s as simple as drag and drop!</Typography>
-              </div>
+              <Typography variant="h5" component="h2" gutterBottom>
+                Encourage media literacy with Hyperaudio for Schools
+              </Typography>
+              <Typography variant="body1">
+                Show students how to create and evaluate media. Video essays anyone?
+              </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <div className={classes.something}>
-                <Typography variant="h5" component="h2" gutterBottom>
-                  Encourage Media Literacy with "Hyperaudio for Schools".
-                </Typography>
-                <Typography variant="body1">
-                  Show students how to create and evaluate media. Video essays anyone?
-                </Typography>
-              </div>
+              <Typography variant="h5" component="h2" gutterBottom>
+                Make your online conference super-accessible and multilingual
+              </Typography>
+              <Typography variant="body1">Search, comment and share conference material with the world.</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <div className={classes.something}>
-                <Typography variant="h5" component="h2" gutterBottom>
-                  Make your online conference super-accessible and multilingual.
-                </Typography>
-                <Typography variant="body1">Search, comment and share conference material with the world.</Typography>
-              </div>
+              <Typography variant="h5" component="h2" gutterBottom>
+                Edit your Podcast in double-quick time
+              </Typography>
+              <Typography variant="body1">And get a searchable Interactive Transcript into the bargain.</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <div className={classes.something}>
-                <Typography variant="h5" component="h2" gutterBottom>
-                  Edit your Podcast in double-quick time.
-                </Typography>
-                <Typography variant="body1">And get a searchable Interactive Transcript into the bargain.</Typography>
-              </div>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <div className={classes.something}>
-                <Typography variant="h5" component="h2" gutterBottom>
-                  Capture lectures so you can experience them remotely and in your own time.
-                </Typography>
-                <Typography variant="body1">Bookmark, annotate and summarise the good bits.</Typography>
-              </div>
+              <Typography variant="h5" component="h2" gutterBottom>
+                Capture lectures so you can experience them remotely and in your own time
+              </Typography>
+              <Typography variant="body1">Bookmark, annotate and summarise the good bits.</Typography>
             </Grid>
           </Grid>
           <Separator silent />
           <ThemeProvider theme={lightTheme}>
-            <Paper className={`${classes.paper}`}>
-              <Typography align="center" className={classes.text} variant="h3">
+            <Paper className={`${classes.signup}`}>
+              <Typography align="center" className={classes.text} gutterBottom variant="h4">
                 Get early access
               </Typography>
               <form
                 action="https://audio.us2.list-manage.com/subscribe/post?u=ebee85ce694a947a39dec9f26&amp;id=f90488e03a"
+                autoComplete="off"
                 id="mc-embedded-subscribe-form"
                 method="post"
                 name="mc-embedded-subscribe-form"
                 noValidate
                 target="_blank">
-                <Grid container>
-                  <Grid item xs>
+                <Grid container spacing={4}>
+                  <Grid item xs={12} sm>
                     <FormControl fullWidth>
                       <InputLabel htmlFor="mce-EMAIL">Email address</InputLabel>
-                      <Input id="mce-EMAIL" fullWidth name="EMAIL" type="email" />
+                      <Input defaultValue="" id="mce-EMAIL" fullWidth name="EMAIL" type="email" />
                     </FormControl>
                   </Grid>
-                  <Grid item xs>
+                  <Grid item xs={12} sm>
                     <FormControl fullWidth>
                       <InputLabel htmlFor="mce-MMERGE1">I'm most interested in</InputLabel>
-                      <Select
-                        // value={signupData.optin}
-                        native
-                        // onChange={handleChange}
-                        fullWidth
-                        inputProps={{
-                          name: 'MMERGE1',
-                          id: 'mce-MMERGE1',
-                        }}>
-                        <option aria-label="None" value="" />
-                        <option value="Hyperaudio for Schools">Hyperaraudio in general</option>
+                      <Select fullWidth inputProps={{ name: 'MMERGE1', id: 'mce-MMERGE1' }} native>
+                        <option aria-label="None" value="" disabled />
+                        <option value="Hyperaudio in general">Hyperaraudio in general</option>
                         <option value="Hyperaudio for Schools">Hyperaudio for Schools</option>
                         <option value="Hyperaudio for Conferences">Hyperaudio for Conferences</option>
                         <option value="Hyperaudio for Lectures">Hyperaudio for Lectures</option>
@@ -184,16 +170,16 @@ const HomeTpl = ({
                       </Select>
                     </FormControl>
                   </Grid>
-                  <Grid item>
+                  <Grid item xs={12} sm="auto" justify="center">
                     <input
-                      style={{ position: 'absolute', left: '-5000px', ariaHidden: 'true' }}
+                      style={{ position: 'absolute', left: '-5000px', ariaHidden: 'true', visibility: 'hidden' }}
                       type="text"
                       name="b_ebee85ce694a947a39dec9f26_f90488e03a"
                       tabindex="-1"
                       value=""
                     />
                     <Button
-                      color="primary"
+                      color="secondary"
                       id="mc-embedded-subscribe"
                       name="subscribe"
                       size="large"

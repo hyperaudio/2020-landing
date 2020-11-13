@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
@@ -41,20 +42,27 @@ const useStyles = makeStyles(theme => ({
 export default function Footer(props) {
   const classes = useStyles();
   return (
-    <Grid alignContent="stretch" alignItems="center" className={classes.root} component="footer" container spacing={8}>
-      <Grid className={`${classes.item} ${classes.motherhood} `} container item md={3} xs={12}>
-        <Hyperaudio className={classes.logo} alt="Hyperaudio" />
+    <Container disableGutters maxWidth="md">
+      <Grid
+        alignContent="stretch"
+        alignItems="center"
+        className={classes.root}
+        component="footer"
+        container
+        spacing={8}>
+        <Grid className={`${classes.item} ${classes.motherhood} `} container item md={3} xs={12}>
+          <Hyperaudio className={classes.logo} alt="Hyperaudio" />
+        </Grid>
+        <Grid className={`${classes.item}`} item md={6} xs={12}>
+          <Typography align="center" component="p" variant="caption" color="textSecondary">
+            This project is licensed under XYZ, meaning you can do this this and that. Feel free to{' '}
+            <Link href={`mailto:${config.mailto}`}>reach to us</Link> for more details.
+          </Typography>
+        </Grid>
+        <Grid className={`${classes.item} ${classes.elsewhere}`} container item md={3} xs={12}>
+          <Elsewhere />
+        </Grid>
       </Grid>
-      <Grid className={`${classes.item}`} item md={6} xs={12}>
-        <Typography align="center" component="p" variant="caption" color="textSecondary">
-          Hyperaudio is a project by Mark Boas, Laurian Gridinoc, Piotr Fedorczyk & Co. This project is licensed under
-          XYZ, meaning you can do this this and that. Feel free to{' '}
-          <Link href={`mailto:${config.mailto}`}>reach to us</Link> for more details.
-        </Typography>
-      </Grid>
-      <Grid className={`${classes.item} ${classes.elsewhere}`} container item md={3} xs={12}>
-        <Elsewhere />
-      </Grid>
-    </Grid>
+    </Container>
   );
 }

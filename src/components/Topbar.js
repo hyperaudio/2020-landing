@@ -10,16 +10,15 @@ import Hyperaudio from '@src/assets/hyperaudio-logo.svg';
 
 const useStyles = makeStyles(theme => ({
   root: { background: 'transparent' },
-  toolbar: { minHeight: 'auto' },
+  toolbar: theme.mixins.toolbar,
   inner: {
     alignContent: 'center',
     alignItems: 'center',
     display: 'flex',
-    // minHeight: 'none',
-    // [theme.breakpoints.up('md')]: {
-    //   minHeight: 'none',
-    //   minHeight: theme.spacing(10),
-    // },
+    minHeight: theme.spacing(8),
+    [theme.breakpoints.up('md')]: {
+      minHeight: theme.spacing(10),
+    },
   },
   brandmark: {
     height: theme.spacing(5),

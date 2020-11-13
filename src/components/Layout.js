@@ -14,9 +14,12 @@ import config from '@src/config';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-    // [theme.breakpoints.up('md')]: {},
+    paddingTop: theme.spacing(0),
+    paddingBottom: theme.spacing(0),
+    [theme.breakpoints.up('md')]: {
+      paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(15),
+    },
   },
   toolbar: theme.mixins.toolbar,
 }));
@@ -35,7 +38,6 @@ export default function Layout({ children, ...props }) {
       <Container className={classes.root}>
         <MDXProvider components={config.mdComponents}>
           <Topbar {...props} />
-          <Separator silent />
           {children}
           <Separator silent />
           {/* <Contact {...props} /> */}

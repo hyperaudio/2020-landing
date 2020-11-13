@@ -53,8 +53,9 @@ export default function Head(props) {
       <style>
         {`
           html {
-            background: linear-gradient(#6100DE, #9C53F8) !important;
+            background: linear-gradient(${theme.palette.background.default}, ${theme.palette.background.paper}) !important;
           }
+          html, body { width: 100%; overflow-x: hidden; }
           body {
             background-attachment: fixed;
             background-color: transparent;
