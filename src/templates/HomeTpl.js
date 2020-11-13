@@ -16,10 +16,14 @@ import { ThemeProvider } from '@material-ui/core/styles';
 
 import Layout from '@src/components/Layout';
 import Separator from '@src/components/Separator';
+import lightTheme from '@src/themes/lightTheme';
 import withTheme from '@src/themes/withTheme';
-import darkTheme from '@src/themes/darkTheme';
 
 const useStyles = makeStyles(theme => ({
+  pitch: {
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
+  },
   ctas: {
     textAlign: 'center',
     marginTop: theme.spacing(5),
@@ -73,13 +77,13 @@ const HomeTpl = ({
         <title>{frontmatter.title}</title>
       </Helmet>
       <main>
-        <Container disableGutters>
+        <Container disableGutters className={classes.pitch}>
           <Container maxWidth="md">
             <Typography align="center" variant="h1" gutterBottom>
               A new way of looking at audio
             </Typography>
             <Typography align="center" className={classes.text} variant="h3">
-              Fully accessible media.
+              Fully accessible media
             </Typography>
           </Container>
         </Container>
@@ -140,7 +144,7 @@ const HomeTpl = ({
             </Grid>
           </Grid>
           <Separator silent />
-          <ThemeProvider theme={darkTheme}>
+          <ThemeProvider theme={lightTheme}>
             <Paper className={`${classes.paper}`}>
               <Typography align="center" className={classes.text} variant="h3">
                 Get early access

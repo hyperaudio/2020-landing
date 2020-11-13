@@ -10,8 +10,8 @@ export default createMuiTheme({
       ...defaultTheme.overrides.MuiPaper,
       root: {
         ...defaultTheme.overrides.MuiPaper.root,
-        backgroundColor: colors.mono[900],
-        color: colors.mono[100],
+        backgroundColor: colors.mono[100],
+        color: colors.mono[900],
       },
       outlined: {
         ...defaultTheme.overrides.MuiPaper.outlined,
