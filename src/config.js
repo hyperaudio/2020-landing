@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@material-ui/core/Link';
 
 export default {
-  description: 'Hyperaudio is THIS THIS AND THAT',
+  description: 'A new way of looking at audio.',
   keywords: 'hyperaudio, audio, webmedia, media, online, speech, text, word, alignment, tools',
   title: 'Hyperaudio',
   url: 'https://hyper.audio/',
@@ -21,7 +21,7 @@ export default {
       tip: 'Visit Hyperaudio Github',
     },
     tinyletter: {
-      url: 'https://tinyletter.com/hyperaudio',
+      url: 'http://eepurl.com/hdUrXr',
       tip: 'Sign up to our tiny letter',
     },
   },

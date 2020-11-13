@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
 
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';

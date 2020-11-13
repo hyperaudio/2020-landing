@@ -45,6 +45,7 @@ export default createMuiTheme({
     },
     MuiButton: {
       root: {
+        borderRadius: 100,
         transition: mui.transitions.create(['background-color', 'box-shadow', 'border', 'color', 'fill'], {
           duration: mui.transitions.duration.standard,
         }),

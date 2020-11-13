@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
-import Contact from '@src/components/Contact';
+// import Contact from '@src/components/Contact';
 import Footer from '@src/components/Footer';
 import Head from '@src/components/Head';
 import Separator from '@src/components/Separator';
@@ -38,8 +38,8 @@ export default function Layout({ children, ...props }) {
           <Separator silent />
           {children}
           <Separator silent />
-          <Contact {...props} />
-          <Separator silent />
+          {/* <Contact {...props} /> */}
+          {/* <Separator silent /> */}
           <Footer {...props} />
         </MDXProvider>
       </Container>
