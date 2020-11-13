@@ -58,7 +58,7 @@ export default function Head(props) {
           html, body { width: 100%; overflow-x: hidden; }
           body {
             background-attachment: fixed;
-            background-color: transparent;
+            background-color: transparent !important;
             background-image: url(${ornament});
             background-position: center 100%;
             background-repeat: no-repeat;
