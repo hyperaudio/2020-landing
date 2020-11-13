@@ -53,14 +53,15 @@ export default function Head(props) {
       <style>
         {`
           html {
-            background: linear-gradient(${theme.palette.background.paper}, ${theme.palette.background.default}) !important;
+            background: linear-gradient(#6100DE, #9C53F8) !important;
           }
           body {
+            background-attachment: fixed;
+            background-color: transparent;
             background-image: url(${ornament});
-            background-position: center 80%;
+            background-position: center 100%;
             background-repeat: no-repeat;
             background-size: cover;
-            background-attachment: fixed;
           }
           button:focus,
           a:focus {

@@ -158,18 +158,19 @@ const HomeTpl = ({
                 target="_blank">
                 <Grid container>
                   <Grid item xs>
-                    <FormControl>
+                    <FormControl fullWidth>
                       <InputLabel htmlFor="mce-EMAIL">Email address</InputLabel>
-                      <Input id="mce-EMAIL" name="EMAIL" type="email" />
+                      <Input id="mce-EMAIL" fullWidth name="EMAIL" type="email" />
                     </FormControl>
                   </Grid>
                   <Grid item xs>
-                    <FormControl>
+                    <FormControl fullWidth>
                       <InputLabel htmlFor="mce-MMERGE1">I'm most interested in</InputLabel>
                       <Select
                         // value={signupData.optin}
                         native
                         // onChange={handleChange}
+                        fullWidth
                         inputProps={{
                           name: 'MMERGE1',
                           id: 'mce-MMERGE1',
