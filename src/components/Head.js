@@ -53,10 +53,12 @@ export default function Head(props) {
       <style>
         {`
           html {
-            background: linear-gradient(${theme.palette.background.default}, ${theme.palette.background.paper}) !important;
           }
           html, body { width: 100%; overflow-x: hidden; }
           body {
+            background: linear-gradient(${theme.palette.background.default}, ${theme.palette.background.paper}) !important;
+          }
+          #root {
             background-attachment: fixed;
             background-color: transparent !important;
             background-image: url(${ornament});

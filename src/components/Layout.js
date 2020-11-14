@@ -35,16 +35,18 @@ export default function Layout({ children, ...props }) {
     <>
       <Head {...props} />
       <CssBaseline />
-      <Container className={classes.root}>
-        <MDXProvider components={config.mdComponents}>
-          <Topbar {...props} />
-          {children}
-          <Separator silent />
-          {/* <Contact {...props} /> */}
-          {/* <Separator silent /> */}
-          <Footer {...props} />
-        </MDXProvider>
-      </Container>
+      <div id="root">
+        <Container className={classes.root}>
+          <MDXProvider components={config.mdComponents}>
+            <Topbar {...props} />
+            {children}
+            <Separator silent />
+            {/* <Contact {...props} /> */}
+            {/* <Separator silent /> */}
+            <Footer {...props} />
+          </MDXProvider>
+        </Container>
+      </div>
     </>
   );
 }
