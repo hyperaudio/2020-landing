@@ -97,21 +97,21 @@ const HomeTpl = ({
           <Grid container spacing={8}>
             <Grid item xs={12} sm={6}>
               <Typography variant="h5" component="h2" gutterBottom>
-                Hyperaudio puts timed-transcripts at the center of your media workflow
+                Hyperaudio puts transcripts at the heart of your media workflow
               </Typography>
               <Typography variant="body1">
-                We make it easy to edit and combine machine-generated transcripts with audio and video.
+                Making transcript-based editing and remixing a joy.
               </Typography>
             </Grid>
             <Grid alignContent="stretch" item xs={12} sm={6}>
               <Typography variant="h5" component="h2" gutterBottom>
-                Remix audio and video from Interactive Transcripts
+                Edit your Podcast in double-quick time
               </Typography>
-              <Typography variant="body1">It’s as simple as drag and drop!</Typography>
+              <Typography variant="body1">And get a searchable Interactive Transcript into the bargain.</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography variant="h5" component="h2" gutterBottom>
-                Encourage media literacy with Hyperaudio for Schools
+                Encouraging media literacy with Hyperaudio for Schools
               </Typography>
               <Typography variant="body1">
                 Show students how to create and evaluate media. Video essays anyone?
@@ -125,13 +125,13 @@ const HomeTpl = ({
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography variant="h5" component="h2" gutterBottom>
-                Edit your Podcast in double-quick time
+                Export your media and transcripts in a number of popular formats
               </Typography>
-              <Typography variant="body1">And get a searchable Interactive Transcript into the bargain.</Typography>
+              <Typography variant="body1">Check out our Wordpress plugin!</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography variant="h5" component="h2" gutterBottom>
-                Capture lectures so you can experience them remotely and in your own time
+                Capture lectures – experience them remotely and in your own time
               </Typography>
               <Typography variant="body1">Bookmark, annotate and summarise the good bits.</Typography>
             </Grid>
