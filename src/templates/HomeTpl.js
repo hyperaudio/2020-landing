@@ -88,7 +88,7 @@ const HomeTpl = ({
               A new way of looking at audio
             </Typography>
             <Typography align="center" className={classes.text} component="p" variant="h3">
-              Fully accessible media
+              (and video)
             </Typography>
           </Container>
         </Container>
