@@ -6,7 +6,7 @@ export default {
   keywords: 'hyperaudio, audio, webmedia, media, online, speech, text, word, alignment, tools',
   title: 'Hyperaudio',
   url: 'https://hyper.audio/',
-  mailto: 'hello@hyper.audio',
+  mailto: 'hello@hyperaud.io',
   elsewhere: {
     slack: {
       url: 'https://hyperaudio.slack.com/signup#/',
