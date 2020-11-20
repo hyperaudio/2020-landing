@@ -99,9 +99,7 @@ const HomeTpl = ({
               <Typography variant="h5" component="h2" gutterBottom>
                 Hyperaudio puts transcripts at the heart of your media workflow
               </Typography>
-              <Typography variant="body1">
-                Making transcript-based editing and remixing a joy.
-              </Typography>
+              <Typography variant="body1">Making transcript-based editing and remixing a joy.</Typography>
             </Grid>
             <Grid alignContent="stretch" item xs={12} sm={6}>
               <Typography variant="h5" component="h2" gutterBottom>
@@ -162,11 +160,11 @@ const HomeTpl = ({
                       <InputLabel htmlFor="mce-MMERGE1">I'm most interested in</InputLabel>
                       <Select fullWidth inputProps={{ name: 'MMERGE1', id: 'mce-MMERGE1' }} native>
                         <option aria-label="None" value="" disabled />
-                        <option value="Hyperaudio in general">Hyperaraudio in general</option>
                         <option value="Hyperaudio for Schools">Hyperaudio for Schools</option>
                         <option value="Hyperaudio for Conferences">Hyperaudio for Conferences</option>
                         <option value="Hyperaudio for Lectures">Hyperaudio for Lectures</option>
                         <option value="Hyperaudio for Podcasters">Hyperaudio for Podcasters</option>
+                        <option value="All of the above!">All of the above!</option>
                       </Select>
                     </FormControl>
                   </Grid>
