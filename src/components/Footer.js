@@ -55,7 +55,7 @@ export default function Footer(props) {
         </Grid>
         <Grid className={`${classes.item}`} item md={6} xs={12}>
           <Typography align="center" component="p" variant="caption" color="textSecondary">
-            This project is licensed under XYZ, meaning you can do this this and that. Feel free to{' '}
+            © The Hyperaudio Project{' '}
             <Link href={`mailto:${config.mailto}`}>reach to us</Link> for more details.
           </Typography>
         </Grid>
