@@ -83,7 +83,7 @@ module.exports = {
           'font-src': "'self' fonts.gstatic.com",
           'img-src': "'self' data: www.google-analytics.com",
           'frame-ancestors': "'none'",
-          'form-action': "'none'",
+          'form-action': "'self' audio.us2.list-manage.com",
         },
       },
     },

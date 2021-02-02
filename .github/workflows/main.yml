@@ -19,21 +19,13 @@ jobs:
         run: |
           npm install
           npm run build
-      # - name: Deps
-      #   uses: borales/actions-yarn@v2.0.0
-      #   with:
-      #     cmd: install # will run `yarn install` command
-      # - name: Build
-      #   uses: borales/actions-yarn@v2.0.0
-      #   with:
-      #     cmd: build # will run `yarn build` command
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-      - name: Deploy
-        uses: jonelantha/gatsby-s3-action@v1
-        with:
-          dest-s3-bucket: landing.hyper.audio 
+      # - name: Deploy
+      #   uses: jonelantha/gatsby-s3-action@v1
+      #   with:
+      #     dest-s3-bucket: landing.hyper.audio 
