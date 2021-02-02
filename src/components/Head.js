@@ -12,10 +12,7 @@ export default function Head(props) {
   return (
     <Helmet encodeSpecialCharacters={true} titleTemplate={`%s ⋅ ${config.title}`} defaultTitle={config.title}>
       <html lang="en" />
-      <meta
-        http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'report-sample' 'self' 'unsafe-inline'; style-src 'report-sample' 'self' https://fonts.googleapis.com 'unsafe-inline'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://601959ed51f813be0fcd07c5.endpoint.csper.io/; worker-src 'none'; frame-ancestors 'none'; form-action 'none';"
-      />
+
       <link rel="canonical" href={config.url} />
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
