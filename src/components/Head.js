@@ -29,6 +29,7 @@ export default function Head(props) {
       <meta name="revist-after" content="after 1 days" />
       <meta name="robots" content="index,follow" />
       <meta name="title" content={config.title} />
+      <meta name="monetization" content="$ilp.uphold.com/3h66mKZLrgQZ" />
       <meta
         name="viewport"
         content="width=device-width, minimum-scale = 1.0, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no, shrink-to-fit=no"
